@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Academic Activities</title>
+    <title>මගේ අධ්‍යයන ක්‍රියාකාරකම්</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>My Academic Activities</h1>
-        <p>Open University of Sri Lanka - Bachelor of Software Engineering (Hons)</p>
-        <p>Year 1, Semester 1</p>
+        <header>
+            <h1>මගේ අධ්‍යයන ක්‍රියාකාරකම්</h1>
+            <p class="subtitle">Open University of Sri Lanka - Bachelor of Software Engineering (Hons)</p>
+            <p class="subtitle">1 වසර, 1 වන සෙමෙස්ටරය</p>
+        </header>
 
-        <div class="actions">
-            <a href="add_course.html" class="button">Add Course</a>
-            <a href="view_courses.html" class="button">View Courses</a>
-        </div>
+        <section class="dashboard">
+            <h2>Quick Actions</h2>
+            <div class="quick-actions">
+                <a href="add_course.html" class="action-button">Add Course</a>
+                <a href="view_courses.html" class="action-button">View Courses</a>
+                <a href="add_reminder.html" class="action-button">Add Reminder</a>
+                <a href="view_reminders.html" class="action-button">View Reminders</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 My Activity Tracker</p>
+        </footer>
     </div>
 </body>
 </html>
