@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>පාඨමාලාවක් එකතු කරන්න</title>
+</head>
+<body>
+    <h1>පාඨමාලාවක් එකතු කරන්න</h1>
+    <form id="addCourseForm">
+        <div>
+            <label for="courseName">පාඨමාලාවේ නම:</label>
+            <input type="text" id="courseName" name="courseName" required><br><br>
+        </div>
+        <div>
+            <label>අවුරුද්ද:</label>
+            <select id="year" name="year">
+                <option value="1">1 වසර</option>
+                <option value="2">2 වසර</option>
+                <option value="3">3 වසර</option>
+                <option value="4">4 වසර</option>
+            </select><br><br>
+        </div>
+        <div>
+            <label>සෙමෙස්ටරය:</label>
+            <select id="semester" name="semester">
+                <option value="1">1 සෙමෙස්ටරය</option>
+                <option value="2">2 සෙමෙස්ටරය</option>
+                <option value="full">අවුරුද්ද පුරා</option>
+            </select><br><br>
+        </div>
+        <div>
+            <button type="submit">පාඨමාලාව එකතු කරන්න</button>
+        </div>
+    </form>
+
+    <br>
+    <a href="index.html">පෙර පිටුවට යන්න</a>
+
+    <script>
+        document.getElementById('addCourseForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // පිටුව නැවත පූරණය වීම වළක්වන්න
+            const courseName = document.getElementById('courseName').value;
+            const year = document.getElementById('year').value;
+            const semester = document.getElementById('semester').value;
+
+            alert(`පාඨමාලාව එකතු කරන ලදී:\nනම: ${courseName}\nඅවුරුද්ද: ${year}\nසෙමෙස්ටරය: ${semester}`);
+            // මෙතනට පාඨමාලා තොරතුරු කොහේ හරි ගබඩා කරන කෝඩ් එක දාන්න පුළුවන් (මේ උදාහරණයේදී alert එකක් විතරයි පෙන්නන්නේ)
+            document.getElementById('addCourseForm').reset(); // ෆෝරමය හිස් කරන්න
+        });
+    </script>
+</body>
+</html>
