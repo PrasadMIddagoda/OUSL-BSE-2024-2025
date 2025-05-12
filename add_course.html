@@ -3,51 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>පාඨමාලාවක් එකතු කරන්න</title>
+    <title>Add Course</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="add_course.js"></script>
 </head>
 <body>
-    <h1>පාඨමාලාවක් එකතු කරන්න</h1>
-    <form id="addCourseForm">
-        <div>
-            <label for="courseName">පාඨමාලාවේ නම:</label>
-            <input type="text" id="courseName" name="courseName" required><br><br>
-        </div>
-        <div>
-            <label>අවුරුද්ද:</label>
-            <select id="year" name="year">
-                <option value="1">1 වසර</option>
-                <option value="2">2 වසර</option>
-                <option value="3">3 වසර</option>
-                <option value="4">4 වසර</option>
-            </select><br><br>
-        </div>
-        <div>
-            <label>සෙමෙස්ටරය:</label>
-            <select id="semester" name="semester">
-                <option value="1">1 සෙමෙස්ටරය</option>
-                <option value="2">2 සෙමෙස්ටරය</option>
-                <option value="full">අවුරුද්ද පුරා</option>
-            </select><br><br>
-        </div>
-        <div>
-            <button type="submit">පාඨමාලාව එකතු කරන්න</button>
-        </div>
-    </form>
+    <div class="container">
+        <h1>Add Course</h1>
+        <form id="addCourseForm">
+            <div class="form-group">
+                <label for="courseName">Course Name:</label>
+                <input type="text" id="courseName" name="courseName" required>
+            </div>
+            <div class="form-group">
+                <label>Year:</label>
+                <select id="year" name="year">
+                    <option value="1">Year 1</option>
+                    <option value="2">Year 2</option>
+                    <option value="3">Year 3</option>
+                    <option value="4">Year 4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Semester:</label>
+                <select id="semester" name="semester">
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="full">Full Year</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="daySchools">Day Schools (Days):</label>
+                <input type="text" id="daySchools" name="daySchools" placeholder="e.g., Saturday">
+            </div>
+            <div class="form-group">
+                <label for="evaluationDetails">Evaluation Details:</label><br>
+                <textarea id="evaluationDetails" name="evaluationDetails" rows="4" placeholder="e.g., 2 Assignments, Final Exam"></textarea>
+            </div>
+            <button type="submit" class="button">Add Course</button>
+        </form>
 
-    <br>
-    <a href="index.html">පෙර පිටුවට යන්න</a>
-
-    <script>
-        document.getElementById('addCourseForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // පිටුව නැවත පූරණය වීම වළක්වන්න
-            const courseName = document.getElementById('courseName').value;
-            const year = document.getElementById('year').value;
-            const semester = document.getElementById('semester').value;
-
-            alert(`පාඨමාලාව එකතු කරන ලදී:\nනම: ${courseName}\nඅවුරුද්ද: ${year}\nසෙමෙස්ටරය: ${semester}`);
-            // මෙතනට පාඨමාලා තොරතුරු කොහේ හරි ගබඩා කරන කෝඩ් එක දාන්න පුළුවන් (මේ උදාහරණයේදී alert එකක් විතරයි පෙන්නන්නේ)
-            document.getElementById('addCourseForm').reset(); // ෆෝරමය හිස් කරන්න
-        });
-    </script>
+        <br>
+        <a href="index.html">Go Back</a>
+    </div>
 </body>
 </html>
